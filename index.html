@@ -4,97 +4,253 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ultimate Innovative Services Pvt. Ltd. (UISPL)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
-    header { background:#003366; color:white; padding:20px; text-align:center; }
-    nav { background:#0055aa; display:flex; justify-content:center; gap:20px; padding:12px; }
-    nav a { color:white; text-decoration:none; font-weight:bold; }
-    .hero { background:#e8f3ff; padding:60px 20px; text-align:center; }
-    .section { padding:50px 20px; max-width:1100px; margin:auto; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; }
-    .card { background:white; padding:25px; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .footer { background:#003366; color:white; padding:20px; text-align:center; margin-top:40px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg,#ffffff,#f5fff8,#e8ffef);
+    }
+
+    :root {
+      --primary: #0b7a3e;
+      --secondary: #34c759;
+      --accent: #e6ff6b;
+      --dark: #064f2a;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 32px 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      border-bottom: none;
+    }
+
+    .title-block h1 {
+      font-size: 42px;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .title-block h3 {
+      font-size: 18px;
+      margin: 0;
+      margin-left: 4px;
+      font-weight: 300;
+    }
+
+    .separator {
+      width: 3px;
+      height: 70px;
+      background: white;
+      opacity: 0.7;
+      margin-left: 10px;
+    }
+
+    .tagline {
+      font-size: 26px;
+      font-style: italic;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+    }
+
+    nav {
+      background: var(--dark);
+      display: flex;
+      gap: 35px;
+      padding: 16px 20px;
+      padding-left: 50px; /* aligned under UISPL group */
+      border-top: none;
+      box-shadow: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .section { padding: 60px 20px; max-width: 1100px; margin: auto; background: linear-gradient(135deg,#ffffff,#f3fff6,#e4ffe9); border-radius:16px; box-shadow:0 4px 14px rgba(0,0,0,0.08); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card, .service-box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--primary);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 700px) {
+      header { padding: 20px; }
+      .title-block h1 { font-size: 28px; }
+      .tagline { font-size: 18px; }
+      nav { padding-left: 20px; gap: 14px; }
+      .hero { padding: 60px 12px; }
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Ultimate Innovative Services Pvt. Ltd.</h1>
-    <h3>Solar Energy • Sustainability • Innovation</h3>
+    <div class="title-block">
+      <h1>UISPL Group</h1>
+      <h3>Ultimate Innovative Services Private Limited</h3>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="tagline">Solar Energy Solutions</div>
   </header>
 
   <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
     <a href="#services">Services</a>
     <a href="#solutions">Solar Solutions</a>
     <a href="#consulting">Consulting</a>
-    <a href="#contact">Contact</a>
+    
+    <a href="#contact">Contact Us</a>
   </nav>
 
-  <div class="hero">
-    <h2>Powering a Greener Tomorrow with Clean Solar Energy</h2>
-    <p>Trusted Solar EPC, Installation & Consulting Partner for Residential, Commercial & Industrial clients.</p>
+  <div id="home" class="hero">
+    <h2>Powering a Greener Tomorrow</h2>
+    <p>Trusted Solar EPC, Installation & Consulting Services</p>
   </div>
 
-  <section class="section" id="services">
-    <h2>Our Main Services</h2>
+  <section id="about" class="section">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:20px; color:var(--primary);">About Us</h2>
+    <p style="font-size:18px; line-height:1.7; text-align:center; max-width:900px; margin:auto;">
+      Ultimate Innovative Services Pvt. Ltd. (UISPL) is a leading provider of comprehensive solar energy solutions,
+      offering end-to-end EPC services, consultation, and advanced solar technology integrations. With a mission to
+      empower India with clean, sustainable, and cost‑efficient energy systems, UISPL delivers world‑class engineering,
+      innovative project execution, and unmatched customer satisfaction.
+    </p>
+    <br>
     <div class="grid">
       <div class="card">
-        <h3>Residential Solar</h3>
-        <p>End-to-end solar solutions for homes with maximum energy savings and long-term reliability.</p>
+        <h3>Our Mission</h3>
+        <p>To accelerate the transition to renewable energy through reliable, affordable, and innovative solar solutions.</p>
       </div>
       <div class="card">
-        <h3>Commercial Solar</h3>
-        <p>Cost-efficient solar installation for offices, shops & commercial establishments.</p>
+        <h3>Our Vision</h3>
+        <p>To become India’s most trusted solar EPC and consulting partner by delivering sustainable value and excellence.</p>
       </div>
       <div class="card">
-        <h3>Industrial Solar</h3>
-        <p>High-capacity solar projects designed for industries & large infrastructures.</p>
+        <h3>Why Choose Us</h3>
+        <p>Expert engineers, premium quality materials, professional installation, and long-term performance support.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="solutions">
-    <h2>Solar System Types</h2>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:25px; color:var(--primary);">Our Main Services</h2>
     <div class="grid">
-      <div class="card">
-        <h3>On-Grid Solar</h3>
-        <p>Grid-connected solar system with net-metering for maximum savings.</p>
-      </div>
-      <div class="card">
-        <h3>Off-Grid Solar</h3>
-        <p>Battery backup systems ideal for remote locations or power-cut areas.</p>
-      </div>
-      <div class="card">
-        <h3>Hybrid Solar</h3>
-        <p>Combined grid + battery system for uninterrupted power supply.</p>
-      </div>
+      <div class="service-box"><h3>Residential Solar</h3><p>End-to-end solar solutions for homes with maximum energy savings and long-term reliability.</p></div>
+      <div class="service-box"><h3>Commercial Solar</h3><p>Cost-efficient solar installation for offices, shops & commercial establishments.</p></div>
+      <div class="service-box"><h3>Industrial Solar</h3><p>High-capacity solar projects designed for industries & large infrastructures.</p></div>
+      <div class="service-box"><h3>Annual Maintenance Contract (AMC)</h3><p>Regular maintenance to ensure optimal performance of your solar system.</p></div>
+      <div class="service-box"><h3>Solar Consultancy</h3><p>Professional guidance for system designing, feasibility studies, ROI analysis & project planning.</p></div>
     </div>
   </section>
 
-  <section class="section" id="consulting">
-    <h2>Solar AMC & Consultancy</h2>
+  <!-- SOLAR SOLUTIONS -->
+  <section id="solutions" class="section">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:25px; color:var(--primary);">Solar System Solutions</h2>
     <div class="grid">
-      <div class="card">
+      <div class="card"><h3>On-Grid Solar</h3><p>Grid-connected solar system with net-metering for maximum savings.</p></div>
+      <div class="card"><h3>Off-Grid Solar</h3><p>Battery backup systems ideal for remote locations or power‑cut areas.</p></div>
+      <div class="card"><h3>Hybrid Solar</h3><p>Combined grid + battery system for uninterrupted power supply.</p></div>
+    </div>
+  </section>
+
+  <!-- CONSULTING (UPDATED) -->
+  <section id="consulting" class="section">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:25px; color:var(--primary);">Consulting Services</h2>
+    <p style="font-size:18px; text-align:center; max-width:900px; margin:auto;">
+      UISPL provides expert consulting for solar planning, subsidy guidance, electrical load study,
+      feasibility reports, and complete project documentation.
+    </p>
+
+    <div class="grid" style="margin-top:30px;">
+      <div class="service-box">
         <h3>Annual Maintenance Contract (AMC)</h3>
         <p>Regular maintenance to ensure optimal performance of your solar system.</p>
       </div>
-      <div class="card">
+
+      <div class="service-box">
         <h3>Solar Consultancy</h3>
         <p>Professional guidance for system designing, feasibility studies, ROI analysis & project planning.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Ultimate Innovative Services Pvt. Ltd. (UISPL)</strong></p>
-    <p>Email: info@uispl.com (placeholder)</p>
-    <p>Phone: +91-9876543210 (placeholder)</p>
-    <p>Location: India</p>
-    <p>This is temporary sample content for your GitHub website.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="section" style="padding-bottom:60px;">
+    <h2 style="text-align:center; font-size:32px; margin-bottom:25px; color:var(--primary);">Contact Us</h2>
+
+    <!-- HORIZONTAL CONTACT BOXES -->
+    <div style="display:flex; gap:15px; justify-content:center; flex-wrap:nowrap;">
+
+      <div class="card" style="width:220px; text-align:center; padding:18px;">
+        <h3>📞 Phone</h3>
+        <p style="font-size:20px; font-weight:600;">+91 9665112925</p>
+      </div>
+
+      <div class="card" style="width:220px; text-align:center; padding:18px;">
+        <h3>✉️ Email</h3>
+        <p style="font-size:20px; font-weight:600;">info@uisplgroup.com</p>
+      </div>
+
+      <div class="card" style="width:220px; text-align:center; padding:18px;"><h3>🏢 UISPL Group<br>📌 Location</h3>
+        <p style="font-size:20px; font-weight:600;">Pune, Maharashtra, India</p>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:30px; font-size:14px; color:#555;">© 2025 Ultimate Innovative Services Pvt. Ltd. | All Rights Reserved.</p>
   </section>
 
-  <div class="footer">
+  <footer class="footer">
     <p>© 2025 Ultimate Innovative Services Pvt. Ltd. | All Rights Reserved.</p>
-  </div>
+  </footer>
+
 </body>
 </html>
